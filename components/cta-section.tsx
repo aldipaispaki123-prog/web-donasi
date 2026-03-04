@@ -10,8 +10,7 @@ export function CtaSection() {
           Setiap Rupiah Anda Berarti
         </h2>
         <p className="mx-auto mb-8 max-w-xl text-primary-foreground/85 leading-relaxed text-pretty">
-          Jadilah bagian dari perubahan. Donasi Anda, sekecil apapun, akan memberikan
-          dampak besar bagi masa depan anak-anak yang membutuhkan.
+          Jadilah bagian dari perubahan. Donasi Anda, sekecil apa pun, akan memberikan masa tua yang lebih layak bagi Abah Alman di sela perjuangannya berjualan kerupuk.
         </p>
         <Button
           asChild

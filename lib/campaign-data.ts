@@ -8,9 +8,9 @@ export const campaignData = {
   daysLeft: 28,
   createdAt: "15 Januari 2026",
   bankAccount: {
-    bankName: "Bank Central Asia (BCA)",
-    accountNumber: "1234567890",
-    accountHolder: "Yayasan BerbagiKebaikan",
+    bankName: "Bank Rakyat Indonesia (BRI)",
+    accountNumber: "767801007674505",
+    accountHolder: "An MARSIANUS KLAU",
   },
   ewallets: [
     { name: "GoPay", number: "081234567890" },
@@ -23,22 +23,13 @@ Setiap hari, tubuh renta abah jualan kerupuk dengan harga 5000/bungkus dan dapat
 
 Gak kenal panas dan hujan abah terus berjuang. Bahkan, abah sering nahan lapar saat jualan. Bila sudah tak kuat nahan lapar, abah makan kerupuk jualannya sendiri
 
-Adapun Kondisi Tempat Tinggal
-Abah Alman biasanya tinggal di sebuah hunian yang sangat sederhana, yang sering kali jauh dari kata layak. Beberapa poin yang sering menonjol dalam kisahnya adalah:
-
-Ruangan Terbatas: Biasanya tinggal di sebuah kontrakan petak atau kamar kecil yang berfungsi sekaligus sebagai tempat tidur, dapur, dan tempat menyimpan stok kerupuk dagangannya.
-
-Fasilitas Seadanya: Lantai yang mungkin hanya semen kasar atau beralaskan tikar tipis, dengan dinding yang sudah kusam. Penerangan dan ventilasi pun sering kali sangat minim.
-
-Lingkungan Padat: Rumahnya biasanya terletak di pemukiman padat penduduk atau gang-gang sempit yang tersembunyi dari keramaian kota.
-
 "Di balik renyahnya setiap keping kerupuk yang kita nikmati, ada peluh seorang kakek tua bernama Abah Alman. Ia tak butuh belas kasihan, ia hanya butuh dagangannya dihargai. Dari keuntungan 500 rupiah per bungkus, ia merajut asa untuk bertahan hidup di tengah kerasnya kota. Kadang kerupuknya habis, namun tak jarang pula ia harus pulang dengan beban yang masih sama beratnya."`,
   gallery: [
     { src: "/images/foto1.png", alt: "Karena kelelahan, Abah Alman tertidur pulas dalam posisi berteduh sambil menjadikan tangannya bantal, sementara panggulan kerupuk diletakkan di sampingnya" },
     { src: "/images/foto2.png", alt: "Lelah dan bingung, tatapan kosong Abah Alman menyiratkan beban berat karena kerupuk dagangannya hari ini belum juga ada yang membeli." },
     { src: "/images/foto3.png", alt: "Usia 79 tahun bukan waktu yang mudah untuk tetap berjualan di bawah guyuran hujan, namun bagi Abah Alman, ini adalah satu-satunya cara untuk bertahan hidup" },
   ],
-  videoUrl: "https://www.youtube.com/embed/Hc8BCOFny6k",
+  videoUrl: "https://www.youtube.com/embed/YESEr9a4NZw",
 }
 
 export function formatRupiah(amount: number): string {

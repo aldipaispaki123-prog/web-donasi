@@ -7,7 +7,7 @@ export function VideoSection() {
         Video Singkat Abah Berjualan
       </h2>
       <p className="mb-10 text-center text-muted-foreground">
-        Saksikan kisah perjuangan dan harapan anak-anak pedalaman
+        Saksikan langsung kisah perjuangan dan keteguhan hati Abah Alman dalam menjemput rezeki di usia senja.
       </p>
 
       <div className="mx-auto max-w-3xl overflow-hidden rounded-xl border border-border shadow-lg">
