@@ -1,7 +1,7 @@
 export const campaignData = {
-  title: "Perjuangan Abah Alman: Menjual kerupuk seharga 5 ribu rupiah demi mendapatkan untung kecil, hanya 500 rupiah dari setiap bungkus yang laku",
-  subtitle: "Ayo Bersama Bantu Abah Alman Di usia 79 tahun, Abah Alman masih harus berjuang menjajakan kerupuk dengan keuntungan hanya Rp500 per bungkus. Jangan biarkan beliau berjuang sendirian di masa tuanya",
-  organizer: "Yayasan BerbagiKebaikan",
+  title: "Perjuangan Abah Alman di Usia 79 Tahun",
+  subtitle: "Abah Alman: Menjual kerupuk seharga 5 ribu rupiah demi mendapatkan untung kecil, hanya 500 rupiah dari setiap bungkus yang laku",
+  organizer: "Yayasan Berbagi",
   targetAmount: 150000000,
   collectedAmount: 100000,
   donorCount: 342,

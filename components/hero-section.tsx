@@ -20,7 +20,7 @@ export function HeroSection() {
 
       <div className="relative mx-auto max-w-6xl px-4 py-24 lg:px-8 lg:py-36">
         <div className="max-w-2xl">
-          <p className="mb-4 text-sm font-medium uppercase tracking-wider text-primary-foreground/80">
+          <p className="mb-3 text-xs md:text-sm font-medium uppercase tracking-wide text-primary-foreground/80 break-words">
             {campaignData.organizer}
           </p>
           <h1 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-primary-foreground text-balance">

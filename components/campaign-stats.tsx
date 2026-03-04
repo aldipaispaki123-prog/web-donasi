@@ -61,7 +61,7 @@ export function CampaignStats() {
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg" className="flex-1">
-              <Link href="/donasi">Donasi Sekarang</Link>
+              <Link href="/donasi">Donasi Sekaran</Link>
             </Button>
             <Button
               variant="outline"

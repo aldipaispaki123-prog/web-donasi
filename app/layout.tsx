@@ -6,7 +6,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'BerbagiKebaikan - Platform Donasi Online',
+  title: 'BerbagiKebaikab - Platform Donasi Online',
   description: 'Bersama kita wujudkan perubahan. Donasi untuk pendidikan anak-anak Indonesia yang membutuhkan.',
   generator: 'v0.app',
   icons: {
