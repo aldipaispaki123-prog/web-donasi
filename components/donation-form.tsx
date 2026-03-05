@@ -207,7 +207,7 @@ export function DonationForm() {
                   {paymentMethod === "qris" && (
                     <div className="flex flex-col items-center justify-center space-y-4 rounded-lg border border-primary/20 bg-primary/5 p-6">
                       <p className="text-center text-sm text-muted-foreground">
-                        Scan barcode QRIS di bawah ini menggunakan aplikasi pembayaran mobile Anda
+                        Mohon maaf Kak, pembayaran via QRIS sedang mengalami gangguan. Untuk sementara, Kakak bisa transfer ke nomor rekening yang sudah tertera. Terima kasih
                       </p>
                       <img
                         src="/images/qris-barcode.jpg"
