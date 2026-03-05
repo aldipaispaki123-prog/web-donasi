@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Copy, Check, CreditCard, Wallet, ArrowLeft } from "lucide-react"
+import { Copy, Check, CreditCard, QrCode, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -19,7 +19,7 @@ export function DonationForm() {
   const [amount, setAmount] = useState("")
   const [isAnonymous, setIsAnonymous] = useState(false)
   const [message, setMessage] = useState("")
-  const [paymentMethod, setPaymentMethod] = useState<"bank" | "ewallet">("bank")
+  const [paymentMethod, setPaymentMethod] = useState<"bank" | "qris">("bank")
   const [copied, setCopied] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const percentage = getProgressPercentage()
@@ -82,17 +82,10 @@ export function DonationForm() {
               </div>
             ) : (
               <div className="space-y-3">
-                {campaignData.ewallets.map((ew) => (
-                  <div key={ew.name} className="flex items-center justify-between rounded-lg bg-secondary p-3">
-                    <div>
-                      <p className="text-xs text-muted-foreground">{ew.name}</p>
-                      <p className="font-mono font-medium text-card-foreground">{ew.number}</p>
-                    </div>
-                    <Button variant="ghost" size="sm" onClick={() => handleCopy(ew.number)}>
-                      {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                    </Button>
-                  </div>
-                ))}
+                <p className="text-sm text-muted-foreground">Scan barcode QRIS di bawah ini untuk melakukan pembayaran:</p>
+                <div className="flex justify-center">
+                  <img src="/images/qris-barcode.jpg" alt="QRIS Barcode" className="h-64 w-64 rounded-lg border border-border" />
+                </div>
               </div>
             )}
           </CardContent>
@@ -179,34 +172,53 @@ export function DonationForm() {
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Payment Method */}
-                <div className="space-y-2">
-                  <Label>Metode Pembayaran</Label>
-                  <div className="grid grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => setPaymentMethod("bank")}
-                      className={`flex items-center justify-center gap-2 rounded-xl border-2 p-3 text-sm font-medium transition-colors ${
-                        paymentMethod === "bank"
-                          ? "border-primary bg-primary/5 text-primary"
-                          : "border-border bg-card text-muted-foreground hover:border-primary/40"
-                      }`}
-                    >
-                      <CreditCard className="h-4 w-4" />
-                      Transfer Bank
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setPaymentMethod("ewallet")}
-                      className={`flex items-center justify-center gap-2 rounded-xl border-2 p-3 text-sm font-medium transition-colors ${
-                        paymentMethod === "ewallet"
-                          ? "border-primary bg-primary/5 text-primary"
-                          : "border-border bg-card text-muted-foreground hover:border-primary/40"
-                      }`}
-                    >
-                      <Wallet className="h-4 w-4" />
-                      E-Wallet
-                    </button>
+                <div className="space-y-4">
+                  <div>
+                    <Label>Metode Pembayaran</Label>
+                    <div className="mt-2 grid grid-cols-2 gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setPaymentMethod("bank")}
+                        className={`flex items-center justify-center gap-2 rounded-xl border-2 p-3 text-sm font-medium transition-colors ${
+                          paymentMethod === "bank"
+                            ? "border-primary bg-primary/5 text-primary"
+                            : "border-border bg-card text-muted-foreground hover:border-primary/40"
+                        }`}
+                      >
+                        <CreditCard className="h-4 w-4" />
+                        Transfer Bank
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setPaymentMethod("qris")}
+                        className={`flex items-center justify-center gap-2 rounded-xl border-2 p-3 text-sm font-medium transition-colors ${
+                          paymentMethod === "qris"
+                            ? "border-primary bg-primary/5 text-primary"
+                            : "border-border bg-card text-muted-foreground hover:border-primary/40"
+                        }`}
+                      >
+                        <QrCode className="h-4 w-4" />
+                        QRIS
+                      </button>
+                    </div>
                   </div>
+
+                  {/* QRIS Barcode Display */}
+                  {paymentMethod === "qris" && (
+                    <div className="flex flex-col items-center justify-center space-y-4 rounded-lg border border-primary/20 bg-primary/5 p-6">
+                      <p className="text-center text-sm text-muted-foreground">
+                        Scan barcode QRIS di bawah ini menggunakan aplikasi pembayaran mobile Anda
+                      </p>
+                      <img
+                        src="/images/qris-barcode.jpg"
+                        alt="QRIS Payment Barcode"
+                        className="h-56 w-56 rounded-lg border-2 border-border bg-white p-2"
+                      />
+                      <p className="text-center text-xs text-muted-foreground">
+                        Tunjukkan barcode ini kepada penerima untuk verifikasi pembayaran
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Name */}
